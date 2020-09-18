@@ -30,7 +30,21 @@ Crea una funcion llamada: challenge1  que realice lo siguiente:
 **/
 
 // CREA TU FUNCION challenge1 aqui 
+function challenge1(){
+    var numero = prompt("¿Cuantos botones se necesitan?");
+    for(var i = 0; i < numero; i++){
+        var target = document.getElementById("dummy")
+        var temp = document.createElement("button")
+        if (i > nombres.length - 1){
+            temp.textContent = "undefined"
+        }else{
+            temp.textContent = nombres[i]
+        }
+        
+        target.appendChild(temp)
+    }
 
+}
 
 
 // ************** PARTE 2    **************
@@ -41,7 +55,11 @@ Crea una funcion llamada: challenge2 que utilizando un FOR convierta todos los n
 **/
 
 // CREA TU FUNCION challenge2 2 aquí.
-
+function challenge2(){
+    for(var i = 0; i < nombres.length; i++){
+        console.log(nombres[i].toUpperCase())
+    }
+}
 
 
 // ************** PARTE 3    **************
@@ -68,7 +86,24 @@ Invoca la función para validar su funcionalidad.
 
 */
 
+function Dog(nombre, color, raza){
+    this.nombre = nombre;
+    this.color = color;
+    this.raza = raza;
+}
 
+var mascota = new Dog("Kadi", "Gris", "Shitzu");
+console.log(mascota)
+var mascota2 = new Dog("Ellie", "Blanco", "Shitzu");
+console.log(mascota2)
+var mascota3 = new Dog("Cafi", "Negro", "Pastor Aleman");
+console.log(mascota3)
+
+function printInfo(Dog){
+    console.log("Nombre: " + Dog.nombre + ", De color: " + Dog.color + ", Raza: " + Dog.raza )
+}
+
+printInfo(mascota)
 
 
 
